@@ -1,0 +1,16 @@
+.footer {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__logo {
+		margin-bottom: 42px;
+
+	}
+
+	&__contact {
+		margin-bottom: 7px;
+	}
+}
