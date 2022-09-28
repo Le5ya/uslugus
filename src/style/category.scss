@@ -1,0 +1,55 @@
+.category {
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    font-weight: 300;
+    padding-left: 30px;
+    background-position: left;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    text-align: left;
+
+    &_photografer {
+      background-image: url('img/camera.svg');
+    }
+
+    &_makeup {
+      background-image: url('img/pencil-simple.svg');
+    }
+
+    &_massuer {
+      background-image: url('img/hand-soap.svg');
+    }
+
+    &_handyman {
+      background-image: url('img/wrench.svg');
+    }
+
+    &_cosmetolog {
+      background-image: url('img/smiley.svg');
+    }
+
+    &_electrician {
+      background-image: url('img/lightning.svg');
+    }
+
+    &_manicure {
+      background-image: url('img/scissors.svg');
+    }
+
+    &_plumber {
+      background-image: url('img/shower.svg');
+    }
+
+
+  }
+}

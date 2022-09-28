@@ -1,3 +1,9 @@
-@import 'style/fonts';
-@import 'style/var';
-@import 'style/style';
+@import '~normalize.css';
+@import 'style/fonts.scss';
+@import 'style/var.scss';
+@import 'style/style.scss';
+@import 'style/header.scss';
+@import 'style/search.scss';
+@import 'style/services.scss';
+@import 'style/service.scss';
+@import 'style/category.scss';

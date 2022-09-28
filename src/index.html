@@ -8,11 +8,12 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="img/favicon.png" type="image/png">
 
-  <title>Услуги</title>
+<title>Услугус - сервис услуг</title>
 </head>
 <body>
 <header class="header">
-    <div class="container">
+    <h1 class="visually-hidden">Услугус - сервис услуг</h1>
+    <div class="container header__container">
         <img src="img/logo.svg" alt="Логотип услуг" class="header__logo">
         <form action="" class="header__search search">
             <input type="text" class="search__input">
@@ -27,7 +28,7 @@
         <div class="header__auth">
         </div>
             <button class="header__auth-btn header__auth_sing-in">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8.81348 15.9375L12.7499 12L8.81348 8.0625" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M2.25 12H12.7472" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M12.75 3.75H18C18.1989 3.75 18.3897 3.82902 18.5303 3.96967C18.671 4.11032 18.75 4.30109 18.75 4.5V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H12.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -36,7 +37,7 @@
 
             </button>
         <button class="header__auth-btn header__auth_sing-up">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 15C15.3137 15 18 12.3137 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 12.3137 8.68629 15 12 15Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
                 <path d="M2.90527 20.2491C3.82736 18.6531 5.15322 17.3278 6.74966 16.4064C8.34611 15.485 10.1569 15 12.0002 15C13.8434 15 15.6542 15.4851 17.2506 16.4065C18.8471 17.3279 20.1729 18.6533 21.0949 20.2493" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -47,41 +48,47 @@
     </div>
 </header>
 <main class="main">
-    <div class="container">
-        <section class="category">
-            <button class="category__title"></button>
-            <ul class="category__list">
-                <li class="category__item">
-                    <button class="category__btn category__btn_photografer">Фотограф</button>
-                </li>
-                <li class="category__item">
-                    <button class="category__btn category__btn_makeup">Визажист</button>
-                </li>
-                <li class="category__item">
-                    <button class="category__btn category__btn_massuer">Массажист</button>
-                </li>
-                <li class="category__item">
-                    <button class="category__btn category__btn_handyman">Муж на час</button>
-                </li>
-                <li class="category__item">
-                    <button class="category__btn category__btn_cosmetolog">Косметолог</button>
-                </li>
-                <li class="category__item">
-                    <button class="category__btn category__btn_electrician">Электрик</button>
-                </li>
-                <li class="category__item">
-                    <button class="category__btn category__btn_manicure">Мастер маникюра</button>
-                </li>
-                <li class="category__item">
-                    <button class="category__btn category__btn_plumber">Сантехник</button>
-                </li>
-            </ul>
-        </section>
         <section class="services">
-            <h2>Список специалистов</h2>
-            <ul class="service__list">
-
-                    <li class="service__item">
+            <h2 class="visually-hidden">Список специалистов</h2>
+            <div class="container services__container">
+                <div class="services__category category">
+                    <button class="category__title">
+                        <span>Категории</span>
+                        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.25 7.5L10 13.75L3.75 7.5" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+        
+                    </button>
+                    <ul class="category__list">
+                        <li class="category__item">
+                            <button class="category__btn category__btn_photografer ">Фотограф</button>
+                            </li>
+                            <li class="category__item">
+                                <button class="category__btn category__btn_makeup">Визажист</button>
+                            </li>
+                            <li class="category__item">
+                                <button class="category__btn category__btn_massuer">Массажист</button>
+                            </li>
+                            <li class="category__item">
+                                <button class="category__btn category__btn_handyman">Муж на час</button>
+                            </li>
+                            <li class="category__item">
+                                <button class="category__btn category__btn_cosmetolog">Косметолог</button>
+                            </li>
+                            <li class="category__item">
+                                <button class="category__btn category__btn_electrician">Электрик</button>
+                            </li>
+                            <li class="category__item">
+                            <button class="category__btn category__btn_manicure">М-р маникюра</button>
+                            </li>
+                            <li class="category__item">
+                                <button class="category__btn category__btn_plumber">Сантехник</button>
+                            </li>
+                            </ul>
+                </div>
+                <ul class="services__list">
+                    <li class="services__item">
                         <article class="service">
                         <img src="img/photo.png" alt="avatar Иван" class="service__avatar">
                         <div class="service__present">
@@ -92,25 +99,28 @@
 
                         <div class="service__review">
                            <div class="service__stars">
-                               <img src="img/star.svg" alt="Рейтинг специалистта 4 из 5" class="service__star">
+                            <img src="img/star.svg" alt="Рейтинг специалиста 4 из 5" class="service__star">
                                <img src="img/star.svg" alt="" class="service__star">
                                <img src="img/star.svg" alt="" class="service__star">
                                <img src="img/star.svg" alt="" class="service__star">
                                <img src="img/star-o.svg" alt="" class="service__star">
                            </div>
+                            <p class="service__count-review">4</p>
                         </div>
                     </article>
                 </li>
             </ul>
+</div>
         </section>
-    </div>
 </main>
 <footer class="footer">
-    <img src="img/logo.svg" alt="" class="footer__logo">
-    <p class="footer__copyright">© Услугус, 2022</p>
-    <div class="footer__contact">
-        <p>Design by Anastasia Ilina</p>
-        <p><a href="https://t.me/Mrshmallowww">@Mrshmallowww</a></p>
+    <div class="container">
+        <img src="img/logo.svg" alt="" class="footer__logo">
+        <p class="footer__copyright">© Услугус, 2022</p>
+        <div class="footer__contact">
+            <p>Design by Anastasia Ilina</p>
+            <p><a href="https://t.me/Marshmalloww">@Marshmalloww</a></p>
+            </div>
     </div>
 </footer>
 <div class="modal modal__service">
@@ -143,16 +153,17 @@
         <div class="about">
             <h3 class="about__title">О себе</h3>
             <p class="about__text">
-                Фотограф с 10 летним стажем Основные направления съёмки: Пейзаж, Портретная съёмка, Реклама, Репортаж, Свадебная съёмка, Food фотосъёмка, съёмка автомобилей.
+                Фотограф с 10 летним стажемОсновные направления съёмки: Пейзаж, Портретная съёмка, Реклама, Репортаж, Свадебная съёмка,
+                Food фотосъёмка, съёмка автомобилей.
                 <br>Ответственный, пунктуальный, исполнительный.
             </p>
         </div>
-            <div class="revew">
+            <div class="review">
                 <h3 class="review__title">Отзывы</h3>
                 <ul class="review__list">
                     <li class="review__item">
                         <div class="review__title">Антон</div>
-                        <div class="service__stars stars">
+                        <div class="review__stars stars">
                             <img src="img/star.svg" alt="Рейтинг специалистта 4 из 5" class="stars__item">
                             <img src="img/star.svg" alt="" class="stars__item">
                             <img src="img/star.svg" alt="" class="stars__item">
