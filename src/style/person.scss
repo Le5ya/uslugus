@@ -8,4 +8,30 @@
     &__review {
         margin-bottom: 40px;
     }
+    &__fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px 12px;
+        
+    }
+    &__contacts {
+        min-width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__input {
+        width: 100%;
+        height: 46px;
+        background-color: #fff;
+        border-radius: 8px;
+        border: none;
+        padding: 10px 14px;
+        font-weight: 300;
+    }
+    &__end-wrapper {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

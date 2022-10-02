@@ -1,5 +1,29 @@
 $back: #f2f5fc;
 $text: #000;
 
+@mixin laptop {
+    @media(max-width: 520px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media(max-width: 520px) {
+        @content;
+    }
+
+}
+
+@mixin mobil {
+    @media(max-width: 520px) {
+        @content;
+    }
+}
+@mixin max-width($width) {
+    @media(max-width: 520px) {
+        @content;
+    }
+}
+
+
 
 
