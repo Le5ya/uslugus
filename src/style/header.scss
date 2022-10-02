@@ -1,16 +1,39 @@
 .header {
-  padding: 0 26px 25px;
+  padding: 26px 0 25px;
+
   &__container {
     display: flex;
+    align-items: center;
+    gap: 20px 30px;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
   &__logo {
-    margin-right: 88px;
+    margin-right: 58px;
+
+    @include laptop {
+      margin-right: 38;
+    }
+    @include tablet {
+      margin-right: 0;
+    }
   }
  &__search {
    margin-right: auto;
+   @include tablet {
+    order: 1
+   }
   }
   &__auth {
     display: flex;
+    gap: 40px;
+
+    @include laptop {
+      gap: 30px;
+    }
     &-btn {
       display: flex;
       align-items: center;
@@ -23,11 +46,11 @@
       &:active {
         color: #ffd600;
       }
+      @include mobile {
+        font-size: 0;
+      }
     }
-    &_sing-in {
-    }
-    &_sing-up {
-    }
+    
   }
 
 }
