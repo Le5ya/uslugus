@@ -12,8 +12,8 @@
 		display: grid;
 		gap: 14px;
 		grid-template-areas: 
-		'logo .'
-		'copyright contact';
+		'logo  contacts'
+		'copyright .';
 
 		@include mobile {
 			grid-template-areas: 
@@ -33,16 +33,21 @@
 	}
 	&__copyright  {
 		grid-area: copyright;
+		margin-top: 70px;
 		align-self: end;
 	}
 
-	&__contact {
-		grid-area: contact;
+	&__contacts {
+		grid-area: contacts;
 		justify-self: end;
+		margin-top: 70px;
 
 		@include mobile {
 			justify-self: start;
 			margin-bottom: 33px;
 		}
+	}
+	&__contact {
+		margin-bottom: 7px;
 	}
 }
