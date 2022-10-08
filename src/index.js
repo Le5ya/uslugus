@@ -5,6 +5,9 @@ import { selectController } from './modules/select__controller';
 import { showPassword } from './modules/show-password';
 import { choicesController } from './modules/choices-controller';
 import { avatarController } from './modules/avatar-controller';
+import { getCategory } from './modules/getCategory';
+import { renderList } from './modules/renderList';
+import { searchControl } from './modules/searchControl';
 
 const init = () => {
     modalController({
@@ -68,5 +71,8 @@ const init = () => {
         uploadResult: '.avatar__result',
     });
 };
+getCategory();
+renderList();
+searchControl();
 
 init();
