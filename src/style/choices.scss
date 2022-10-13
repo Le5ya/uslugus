@@ -6,6 +6,7 @@
 }
 .choices__inner {
     height: 46px;
+    min-width: 100px;
     display: flex;
     align-self: center;
     background-color: #fff;
@@ -13,11 +14,14 @@
     border-radius: 8px;
     padding: 10px 14px;
 }
+
 .choices__list--dropdown {
-    border: none;
+    border: none; 
 }
 .choices__list--dropdown .choices__item--selectable {
     padding-right: 0 !important;
+    margin: 0; 
+    
 
 }
 .choices[data-type*=select-one]::after {

@@ -4,11 +4,12 @@ import { modalController } from './modules/modal-controller.js';
 import { selectController } from './modules/select__controller';
 import { showPassword } from './modules/show-password';
 import { choicesController } from './modules/choices-controller';
-import { avatarController } from './modules/avatar-controller';
 import { getCategory } from './modules/getCategory';
 import { renderList } from './modules/renderList';
 import { searchControl } from './modules/searchControl';
 import { ratingController } from './modules/ratingController';
+
+import { singUpController } from './modules/sing'
 
 const init = () => {
     modalController({
@@ -16,16 +17,21 @@ const init = () => {
         btnOpen: '.header__auth_sing-in',
         btnClose: '.modal__close'
     });
-    modalController({
+    const eventModalSignUp = modalController({
         modal: '.modal__sign-up',
         btnOpen: '.header__auth_sing-up',
-        btnClose: '.modal__close'
+        btnClose: '.modal__close',
+        handlerCloseModal: () => {
+            const form = document.querySelector('.form-sign-up');
+            form.reset();
+        },
     });
     const modalPerson = modalController({
         modal: '.modal__person',
         btnOpen: '.service',
         parrentBtns: '.services__list',
         btnClose: '.modal__close',
+        
         handlerOpenModal: async () => {
             const data = await fetch('https://jsonplaceholder.typicode.com/todos/1')
             .then(response => response.json());
@@ -67,14 +73,13 @@ const init = () => {
     
     showPassword();
     choicesController();
-    const crp = avatarController({
-        inputFile: '.avatar__input',
-        uploadResult: '.avatar__result',
-    });
+    
 };
 getCategory();
 renderList();
 searchControl();
 ratingController();
+
+singUpController(eventModalSignUp.closeModal);
 
 init();

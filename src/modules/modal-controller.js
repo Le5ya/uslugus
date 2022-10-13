@@ -4,6 +4,8 @@ export const modalController = ({modal,
     time = 300, 
     parrentBtns,
     handlerOpenModal = () => {},
+    handlerCloseModal = () => {},
+
 }) => {
     const hendlerElems = parrentBtns 
     ? document.querySelector(parrentBtns)
@@ -17,53 +19,57 @@ export const modalController = ({modal,
         transition: opacity ${time}ms ease-in-out;
         `;
 
-        const event = {
+        const data = {
             handlerOpenModal,
+            handlerCloseModal,
             onOpenModal: (handlerOpenModal) => {
-                event.handlerOpenModal = handlerOpenModal;
-            }
-        }
-    
-        const closeModal = event => {
-        const target = event.target;
-    
-        if (
-            target === modalElem ||
-            (btnClose && target.closest(btnClose)) ||
-            event.code === 'Escape'
-            ) {
+                data.handlerOpenModal = handlerOpenModal;
+            },
+            onCloseModal: (handlerCloseModal) => {
+                data.handlerOpenModal = handlerOpenModal;
+            }, 
+            closeModal: event => {
+                const target = event.target;
             
-            modalElem.style.opacity = 0;
-    
-            setTimeout(() => {
-            modalElem.style.visibility = 'hidden';
-            }, time);
-    
-            window.removeEventListener('keydown', closeModal);
+                if (
+                    target === modalElem ||
+                    (btnClose && target.closest(btnClose)) ||
+                    event.code === 'Escape' ||
+                    event.type === 'submit'
+                    ) {
+                    
+                    modalElem.style.opacity = 0;
+            
+                    setTimeout(() => {
+                    modalElem.style.visibility = 'hidden';
+                    data.handlerCloseModal();
+                    }, time);
+                    
+            
+                    window.removeEventListener('keydown', data.closeModal);
+                    }
+                },
+                openModal:  async () => {
+                    await data.handlerOpenModal();
+                    modalElem.style.visibility = 'visible';
+                    modalElem.style.opacity = '1';
+                    window.addEventListener('keydown', data.closeModal)
+                    },
         }
-        }
-    
-        const openModal = async () => {
-        await event.handlerOpenModal();
-        modalElem.style.visibility = 'visible';
-        modalElem.style.opacity = 1;
-        window.addEventListener('keydown', closeModal)
-        };
-
         if(parrentBtns) {
             hendlerElems.addEventListener('click', ({target}) => {
                 if(target.closest(btnOpen)) {
-                    openModal();
+                    data.openModal();
                 }
             })
         } else {
             hendlerElems.forEach(btn => {
-                btn.addEventListener('click', openModal);
+                btn.addEventListener('click', data.openModal);
                 }); 
         }
 
-        modalElem.addEventListener('click', closeModal);
+        modalElem.addEventListener('click', data.closeModal);
 
-        return event;
+        return data;
         
     };
